@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css?family=Palanquin+Dark&display=swap");
+body {
+  margin: 0 auto;
+  font-size: 16px;
+  font-family: Roboto;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1170px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  -webkit-box-shadow: 0px 1px 3px #ddd;
+          box-shadow: 0px 1px 3px #ddd;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 24px 0 20px 0;
+}
+
+.navigation .header-navigation,
+.navigation .right-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation .header-navigation {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.navigation .header-navigation__element {
+  padding-right: 50px;
+}
+
+.navigation .header-navigation .ubcoin-logo {
+  color: #32BB8F;
+  font-size: 16px;
+  font-weight: 700;
+  padding-right: 85px;
+}
+
+.navigation .right-nav__element {
+  padding-right: 20px;
+}
+
+.navigation .right-nav .hamburger {
+  padding-top: 3px;
+}
+
+.content-block {
+  padding-top: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content-block__element {
+  width: 50%;
+}
+
+.content-block .slider {
+  padding-right: 140px;
+  width: 500px;
+  height: 500px;
+}
+
+.fotorama__nav {
+  text-align: left !important;
+}
+
+.item-inform {
+  padding: 0px 40px 0 20px;
+}
+
+.item-inform .dop {
+  position: relative;
+  font-size: 17px;
+  line-height: 24px;
+  color: #32BB8F;
+}
+
+.item-inform .dop .share {
+  position: absolute;
+  right: 0;
+  top: 35px;
+  text-alight: right;
+}
+
+.item-inform .dop .logo-svg {
+  position: absolute;
+  display: inline-block;
+  top: 2px;
+  left: -19px;
+}
+
+.item-inform .title {
+  position: relative;
+  font-family: Palanquin Dark;
+  font-size: 30px;
+  line-height: 40px;
+  color: #242424;
+  font-weight: 400;
+}
+
+.item-inform .title .forRoboto {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.item-inform .title::after {
+  position: absolute;
+  content: "";
+  width: 63%;
+  top: 110px;
+  left: 0;
+  opacity: 0.2;
+  border: 1px solid #242424;
+}
+
+.item-inform .text-inf {
+  padding-top: 50px;
+  font-family: Roboto;
+}
+
+.item-inform .text-inf p {
+  margin: 16px 0;
+}
+
+.property-element {
+  position: relative;
+  line-height: 24px;
+  margin: 30px 0;
+}
+
+.property-element .property {
+  opacity: 0.5;
+}
+
+.property-element p {
+  margin: 5px 0;
+}
+
+.property-element .showLocation {
+  top: 25px;
+  right: 0;
+  position: absolute;
+  color: #32BB8F;
+}
+
+.seller {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #F5F7F6;
+  padding: 13px;
+}
+
+.seller__photo {
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  background: url(../img/seller.jpg) center/cover no-repeat;
+}
+
+.seller__info {
+  margin-left: 25px;
+}
+
+.seller__info .items {
+  opacity: 0.5;
+}
+/*# sourceMappingURL=style.css.map */
