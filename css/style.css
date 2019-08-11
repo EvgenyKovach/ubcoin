@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Palanquin+Dark&display=swap");
+a {
+  text-decoration: none;
+}
+
+a:hover, a:visited {
+  color: black;
+}
+
 body {
   margin: 0 auto;
   font-size: 16px;
@@ -15,9 +23,11 @@ body {
 
 .header {
   position: fixed;
+  z-index: 10;
   width: 100%;
   -webkit-box-shadow: 0px 1px 3px #ddd;
           box-shadow: 0px 1px 3px #ddd;
+  background-color: #fff;
 }
 
 .navigation {
@@ -27,7 +37,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 24px 0 20px 0;
+  padding: 24px 0 16px 0;
 }
 
 .navigation .header-navigation,
@@ -160,6 +170,7 @@ body {
   right: 0;
   position: absolute;
   color: #32BB8F;
+  text-decoration: none;
 }
 
 .seller {
@@ -183,5 +194,15 @@ body {
 
 .seller__info .items {
   opacity: 0.5;
+}
+
+.location {
+  margin-bottom: 10px;
+}
+
+.map {
+  background: url(../img/map.jpg) center/cover no-repeat;
+  width: 500px;
+  height: 400px;
 }
 /*# sourceMappingURL=style.css.map */

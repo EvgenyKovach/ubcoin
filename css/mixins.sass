@@ -1,0 +1,41 @@
+$breakpoints: ('sm': 320px,'md': 760px,'lg': 1170px) !default
+=bp($breakpoint)
+	@if map-has-key($breakpoints, $breakpoint)
+		@media (max-width: map-get($breakpoints, $breakpoint))
+			@content
+	@else
+		@media (max-width: $breakpoint)
+			@content	
+
+=bph($breakpoint)
+	@if map-has-key($breakpoints, $breakpoint)
+		@media (max-height: map-get($breakpoints, $breakpoint))
+			@content
+	@else
+		@media (max-height: $breakpoint)
+			@content
+
+
+=bpm($breakpoint)
+	@if map-has-key($breakpoints, $breakpoint)
+		@media (min-width: map-get($breakpoints, $breakpoint))
+			@content
+	@else
+		@media (min-width: $breakpoint)
+			@content
+
+
+=bpmo($breakpoint, $orientation)
+	@if $orientation == 'p'
+		@media (min-width: $breakpoint) and (orientation: portrait)
+			@content
+	@else if $orientation == 'l'
+		@media (min-width: $breakpoint) and (orientation: landscape)
+			@content
+	@else
+		@media (min-width: $breakpoint)
+			@content
+
+=ie10()
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+		@content

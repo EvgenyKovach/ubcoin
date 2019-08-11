@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Palanquin+Dark&display=swap')
-  
+@import 'mixins'
+
+a
+  text-decoration: none
+
+a:hover, a:visited
+  color: black
+
 body
   margin: 0 auto
   font-size: 16px
@@ -13,13 +20,15 @@ body
   
 .header
   position: fixed
+  z-index: 10
   width: 100%
   box-shadow: 0px 1px 3px #ddd
+  background-color: #fff
 
 .navigation
   display: flex
   justify-content: space-between
-  padding: 24px 0 20px 0
+  padding: 24px 0 16px 0
 
   .header-navigation,
   .right-nav
@@ -119,6 +128,7 @@ body
     right: 0
     position: absolute
     color: #32BB8F
+    text-decoration: none
 
 .seller
   display: flex
@@ -134,4 +144,12 @@ body
     margin-left: 25px
     .items
       opacity: 0.5
+
+.location
+  margin-bottom: 10px
+
+.map
+  background: url(../img/map.jpg) center/cover no-repeat
+  width: 500px
+  height: 400px
 
