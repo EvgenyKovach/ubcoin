@@ -295,7 +295,7 @@ body {
 
 @media (max-width: 450px) {
   .item-inform .title {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 
@@ -312,6 +312,7 @@ body {
 @media (max-width: 450px) {
   .item-inform .title::after {
     width: 95%;
+    top: 97px;
   }
 }
 
@@ -325,13 +326,20 @@ body {
 
 @media (max-width: 450px) {
   .item-inform .dop-info {
-    font-size: 20px;
+    font-size: 22px;
+    padding-top: 15px;
   }
 }
 
 .item-inform .text-inf {
   padding-top: 25px;
   font-family: Roboto;
+}
+
+@media (max-width: 450px) {
+  .item-inform .text-inf {
+    padding-top: 20px;
+  }
 }
 
 .item-inform .text-inf p {
