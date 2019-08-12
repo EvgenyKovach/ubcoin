@@ -125,18 +125,26 @@ body
     hieght: 320px !important
     width: 320px !important
 
+.fotorama__nav-wrap
+  +bp(700px)
+    display: none
+
 .item-inform
   padding: 0px 40px 0 20px
   +bp(950px)
-    padding-top: 16px
+    padding-top: 20px
   +bp(700px)
     padding: 20px 10px
 
-  .dop
+  .brend
     position: relative
     font-size: 17px
     line-height: 24px
     color: #32BB8F
+    +bp(950px)
+        padding-bottom: 10px
+    +bp(600px)
+      font-size: 17px
     .share
       position: absolute
       color: #32BB8F
@@ -164,6 +172,10 @@ body
     line-height: 40px
     color: #242424
     font-weight: 400
+    +bp(450px)
+      font-size: 22px
+
+    
     &::after
       position: absolute
       content: ""
