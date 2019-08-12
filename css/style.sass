@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Palanquin+Dark&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap')
 @import 'mixins'
 
 a
   text-decoration: none
+  color: #fff
 
 a:hover, a:visited
   color: black
@@ -11,6 +13,7 @@ body
   margin: 0 auto
   font-size: 16px
   font-family: Roboto
+  margin-bottom: 100px
 
 .container
   margin: 0 auto
@@ -27,8 +30,11 @@ body
 
 .navigation
   display: flex
-  justify-content: space-between
   padding: 24px 0 16px 0
+  +bp (1200px)
+    padding: 24px 20px 16px 20px
+  +bp (700px)
+    padding: 24px 0 16px 0
 
   .header-navigation,
   .right-nav
@@ -37,39 +43,95 @@ body
   .header-navigation
     font-size: 15px
     line-height: 24px
+    +bp(700px)
+        margin: auto
 
     &__element
       padding-right: 50px
+      +bp(700px)
+        display: none
 
     .ubcoin-logo
+      display: block
+      width: 94px
+      height: 17px
       color: #32BB8F
-      font-size: 16px
       font-weight: 700
-      padding-right: 85px
+      padding-right: 75px
+      padding-top: 5px
+      +bp(700px)
+        padding-right: 0
+      
+        
 
-  .right-nav
-    &__element
-      padding-right: 20px 
+.hamburger
+  padding-right: 20px
+  padding-top: 4px
+  padding-left: 35px
+  +bp(700px)
+    margin-right: 0
+    padding-left: 0
 
-    .hamburger
-      padding-top: 3px 
+.search
+  margin-left: auto
+  +bp(700px)
+    order: -1
+    margin-left: 15px
 
 .content-block
   padding-top: 150px
   display: flex
+  +bp(950px)
+    flex-direction: column
+    align-items: center
+    padding-top: 50px
+
   &__element
     width: 50%
+    +bp(950px)
+      width: 100%
 
   .slider
+    position: relative
     padding-right: 140px
-    width: 500px
-    height: 500px
+    +bp(1200px)
+      padding-right: 70px
+      padding-left: 40px
+    +bp(950px)
+      display: flex;
+      justify-content: center;
+      padding: 0
+
+    .ct-zoom
+      position: absolute
+      top: 590px
+      opacity: 0.5
+      color: #242424
+      font-family: Roboto
+      font-size: 12px
+      +bp(1200px)
+        top: 490px
+      +bp(950px)
+        display: none
 
 .fotorama__nav
   text-align: left !important
 
+.fotorama__wrap
+  +bp(1200px)
+    hieght: 400px !important
+    width: 400px !important
+  +bp(700px)
+    hieght: 320px !important
+    width: 320px !important
+
 .item-inform
   padding: 0px 40px 0 20px
+  +bp(950px)
+    padding-top: 16px
+  +bp(700px)
+    padding: 20px 10px
+
   .dop
     position: relative
     font-size: 17px
@@ -77,9 +139,16 @@ body
     color: #32BB8F
     .share
       position: absolute
-      right: 0
+      color: #32BB8F
+      right: 30px
       top: 35px
       text-alight: right
+      z-index: 1
+      +bp(1100px)
+        top: 0
+      +bp(700px)
+        right: 0
+
 
     .logo-svg
       position: absolute
@@ -95,22 +164,28 @@ body
     line-height: 40px
     color: #242424
     font-weight: 400
-    .forRoboto
-      font-style: normal
-      font-weight: bold
-      font-size: 24px
-
     &::after
       position: absolute
       content: ""
-      width: 63%
+      width: 317px
       top: 110px
       left: 0
       opacity: 0.2
       border: 1px solid #242424
+      +bp(450px)
+        width: 95%
+
+  .dop-info
+    padding-top: 23px
+    font-family: Roboto
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    +bp(450px)
+      font-size: 20px
 
   .text-inf
-    padding-top: 50px
+    padding-top: 25px
     font-family: Roboto
     p
       margin: 16px 0
@@ -124,16 +199,20 @@ body
   p
     margin: 5px 0
   .showLocation
-    top: 25px
+    top: 29px
     right: 0
     position: absolute
     color: #32BB8F
     text-decoration: none
+    +bp(600px)
+      position: relative
+      top: 3px
 
 .seller
   display: flex
   background: #F5F7F6
   padding: 13px
+  border-radius: 6px
   &__photo
     border-radius: 50%
     width: 64px
@@ -150,6 +229,10 @@ body
 
 .map
   background: url(../img/map.jpg) center/cover no-repeat
-  width: 500px
-  height: 400px
+  width: 100%
+  min-height: 400px
+  +bp(1100px)
+    min-height: 350px
+  +bp(600px)
+    min-height: 200px
 
