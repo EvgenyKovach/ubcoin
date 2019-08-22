@@ -1,254 +1,289 @@
-@import url('https://fonts.googleapis.com/css?family=Palanquin+Dark&display=swap')
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap')
 @import 'mixins'
 
-a
-  text-decoration: none
-  color: #fff
-
-a:hover, a:visited
-  color: black
+html
+  position: relative
 
 body
-  margin: 0 auto
-  font-size: 16px
-  font-family: Roboto
-  margin-bottom: 100px
+  position: relative
+  background-color: #111
+  font-family: 'Russo One', sans-serif
+  margin: 0
+  overflow-x: hidden
 
+  
 .container
   margin: 0 auto
+  padding: 0
   width: 100%
-  max-width: 1170px
+  max-width: 1200px
+  background-color: #272727
   box-sizing: border-box
-  
-.header
-  position: fixed
-  z-index: 10
+
+li
+  list-style: none
+
+.top-box
+  display: flex
+  justify-content: space-between
+  align-items: center
   width: 100%
-  box-shadow: 0px 1px 3px #ddd
-  background-color: #fff
 
-.navigation
-  display: flex
-  padding: 24px 0 16px 0
-  +bp (1200px)
-    padding: 24px 20px 16px 20px
-  +bp (700px)
-    padding: 24px 0 16px 0
-
-  .header-navigation,
-  .right-nav
-    display: flex
-
-  .header-navigation
-    font-size: 15px
-    line-height: 24px
-    +bp(700px)
-        margin: auto
-
-    &__element
-      padding-right: 50px
-      +bp(700px)
-        display: none
-
-    .ubcoin-logo
-      display: block
-      width: 94px
-      height: 17px
-      color: #32BB8F
-      font-weight: 700
-      padding-right: 75px
-      padding-top: 5px
-      +bp(700px)
-        padding-right: 0
-      
-        
-
-.hamburger
-  padding-right: 20px
-  padding-top: 4px
-  padding-left: 35px
-  +bp(700px)
-    margin-right: 0
-    padding-left: 0
-
-.search
-  margin-left: auto
-  +bp(700px)
-    order: -1
-    margin-left: 15px
-
-.content-block
-  padding-top: 150px
-  display: flex
-  +bp(950px)
+  +bp(900px)
     flex-direction: column
     align-items: center
-    padding-top: 50px
+    justify-content: center
 
-  &__element
-    width: 50%
-    +bp(950px)
-      width: 100%
+header
+  display: flex
 
-  .slider
+.logo
+  width: 20%
+  height: 240px
+  color: #fff
+  padding: 5px 25px
+  text-align: center
+  +bp(900px)
+    width: 100%
+    height: auto
+  p
+    margin: 0
+
+.info-logo
+  margin: auto
+  height: 140px
+  width: 140px
+  background: url(../img/logo.png) center/cover no-repeat
+
+
+.slider
+  width: 80%
+  +bp(900px)
+    width: 100%
+  .fotorama__wrap
+    margin: auto
+.fotorama__stage__frame 
+  +bp(800px)
+    height: 150px !important
+.fotorama__stage
+  +bp(800px)
+    height: 150px !important
+.nav
+  .nav_list::before,
+  .nav_list::after
+    position: absolute
+    content: ""
+    width: 25px
+    height: 25px
+    top: 7px
+    background: url(../img/imp.png) center/cover no-repeat
+    +bp(700px)
+      display: none
+  .nav_list::after
+    right: 10px
+  .nav_list::before
+    left: 10px
+
+.nav_list
+  position: relative
+  display: flex
+  justify-content: space-around
+  margin: 0
+  padding: 10px
+  background-color: #B20000
+  opacity: 0.8
+  border: 2px solid black
+
+  &__element:hover
+    transition: 0.1s
+    transform: scale(1.02)
+    text-shadow: 3px 10px 10px black
+
+  a
+    color: #fff
+    text-decoration: none
+
+
+.wrapper
+  .central-content
+    padding: 30px 10px 30px 10px
+    display: flex
+
+    +bp(860px)
+      flex-direction: column
+      margin-left: 30px
+
+    +bp(430px)
+      margin-left: 10px
+
+  .nav_list
+    flex-direction: column
+    width: 200px
+    background-color: #111
+
+    &__element
+      padding: 10px 3px
+
+    &__element:hover
+      transition: 0.1s
+      transform: scale(1.02)
+      text-shadow: 2px 5px 10px red
+
+    a
+      color: white
+
+  .left-nav
     position: relative
-    padding-right: 140px
-    +bp(1200px)
-      padding-right: 70px
-      padding-left: 40px
-    +bp(950px)
-      display: flex;
-      justify-content: center;
+    display: flex
+    flex-direction: column
+    +bp(860px)
+      margin-bottom: 0px
+
+    .nav_list
+      +bp(860px)
+        opacity: 1
+        background-color: #000
+
+  .left-nav__global,
+  .left-nav__dop
+    +bp(860px)
+      position: fixed 
+      left: -300px
+      opacity: 1
+
+    .nav_list__element
+      +bp(480px)
+        padding: 3px 0
+    
+
+  .left-nav__global
+    +bp(430px)
+      top: 340px
+    .nav_list
+      +bp(860px)
+        padding-top: 25px
+  
+  .left-nav__dop
+    margin-top: 20px
+    +bp(860px)
+      margin-top: 0
+      
+    .nav_list
+      background-color: #211919
+
+.nav-title
+  color: #f1f1f1
+  text-shadow: 2px 5px 10px red
+
+.nav-trigger 
+  position: fixed
+  cursor: pointer
+  display: none
+  color: white
+  font-size: 25px
+  top: 540px
+  left: 5px
+  width: 30px
+  height: 30px
+  z-index: 300
+  +bp(860px)
+    display: block
+
+.nav-trigger_x
+  position: fixed
+  left: 5px
+  top: 540px
+  cursor: pointer
+  width: 30px
+  height: 30px
+  z-index: 3
+  background: url("../img/x-t.png") center/cover no-repeat
+
+.right-content
+  padding: 0 30px
+  color: white
+  +bp(700px)
+    padding: 0 10px
+
+  .site-inform
+    border-bottom: 1px dotted red
+    padding-bottom: 25px
+
+  &__title
+    font-size: 22px
+    padding-bottom: 20px
+    text-shadow: 3px 1px 2px #960808
+
+  &__img
+    margin: 20px 0
+
+    img
+      width: 100%
+      height: auto
+
+.news
+  display: flex
+  flex-direction: column
+  +bp(900px)
+    flex-direction: row
+  +bp(600px)
+    flex-direction: column
+
+.news-anons
+  display: flex
+  padding: 20px 0
+  +bp(900px)
+    flex-direction: column
+  
+  &__title a
+    text-decoration: none
+    color: #fff
+    font-size: 18px
+    text-shadow: 0 0 2px red
+
+  &__prew
+    overflow: hidden
+    width: 85%
+    padding: 0 10px
+    font-size: 14px
+    +bp(900px)
       padding: 0
 
-    .ct-zoom
-      position: absolute
-      top: 590px
-      opacity: 0.5
-      color: #242424
-      font-family: Roboto
-      font-size: 12px
-      +bp(1200px)
-        top: 490px
-      +bp(950px)
-        display: none
+  &__img
+    width: 200px
+    height: 90px
+    box-shadow: 0 0 1px red
 
-.fotorama__nav
-  text-align: left !important
+    img
+      width: 100%
+      height: 100% 
 
-.fotorama__wrap
-  +bp(1200px)
-    hieght: 400px !important
-    width: 400px !important
-  +bp(700px)
-    hieght: 320px !important
-    width: 320px !important
+.footer
+  .nav_footer
+    display: flex
+    justify-content: space-around
+    margin: 0
+    padding: 10px
+    background-color: #B20000
+    border: 2px solid black
 
-.fotorama__nav-wrap
-  +bp(700px)
-    display: none
+    &__element:hover
+      transition: 0.1s
+      transform: scale(1.02)
+      text-shadow: 3px 10px 10px black
 
-.item-inform
-  padding: 0px 40px 0 20px
-  +bp(950px)
-    padding-top: 20px
-  +bp(700px)
-    padding: 20px 10px
+    a
+      color: #fff
+      text-decoration: none
 
-  .brend
-    position: relative
-    font-size: 17px
-    line-height: 24px
-    color: #32BB8F
-    +bp(950px)
-        padding-bottom: 10px
-    +bp(600px)
-      font-size: 17px
-    .share
-      position: absolute
-      color: #32BB8F
-      right: 30px
-      top: 35px
-      text-alight: right
-      z-index: 1
-      +bp(1100px)
-        top: 0
-      +bp(700px)
-        right: 0
+  .foo-info
+    padding: 10px
+    font-size: 12px
+    color: #777A66
 
-
-    .logo-svg
-      position: absolute
-      display: inline-block
-      top: 2px
-      left: -19px
-        
-
-  .title
-    position: relative
-    font-family: Palanquin Dark
-    font-size: 30px
-    line-height: 40px
-    color: #242424
-    font-weight: 400
-    +bp(450px)
-      font-size: 24px
-
-    
-    &::after
-      position: absolute
-      content: ""
-      width: 317px
-      top: 110px
-      left: 0
-      opacity: 0.2
-      border: 1px solid #242424
-      +bp(450px)
-        width: 95%
-        top: 97px
-
-  .dop-info
-    padding-top: 23px
-    font-family: Roboto
-    font-style: normal
-    font-weight: bold
-    font-size: 24px
-    +bp(450px)
-      font-size: 22px
-      padding-top: 15px
-
-  .text-inf
-    padding-top: 25px
-    font-family: Roboto
-    +bp(450px)
-      padding-top: 20px
-    p
-      margin: 16px 0
-
-.property-element
-  position: relative
-  line-height: 24px
-  margin: 30px 0
-  .property
-    opacity: 0.5
-  p
-    margin: 5px 0
-  .showLocation
-    top: 29px
-    right: 0
-    position: absolute
-    color: #32BB8F
-    text-decoration: none
-    +bp(600px)
-      position: relative
-      top: 3px
-
-.seller
-  display: flex
-  background: #F5F7F6
-  padding: 13px
-  border-radius: 6px
-  &__photo
-    border-radius: 50%
-    width: 64px
-    height: 64px
-    background: url(../img/seller.jpg) center/cover no-repeat
-
-  &__info
-    margin-left: 25px
-    .items
-      opacity: 0.5
-
-.location
-  margin-bottom: 10px
-
-.map
-  background: url(../img/map.jpg) center/cover no-repeat
-  width: 100%
-  min-height: 400px
-  +bp(1100px)
-    min-height: 350px
-  +bp(600px)
-    min-height: 200px
-
+.nav_list-v
+  +bp(480px)
+    flex-direction: column
+  
+  .nav_list__element
+    padding: 5px 0
